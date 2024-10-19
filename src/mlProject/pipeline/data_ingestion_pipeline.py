@@ -1,7 +1,7 @@
 from mlProject.config.configuration import ConfigurationManager
 from mlProject.components.data_ingestion import DataIngestion
 
-class DataIngestionTrainingPipeline:
+class DataIngestionPipeline:
     def __init__(self):
         pass
     
