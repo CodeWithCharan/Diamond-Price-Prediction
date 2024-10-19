@@ -1,7 +1,7 @@
 from mlProject.config.configuration import ConfigurationManager
 from mlProject.components.data_validation import DataValiadtion
 
-class DataValidationTrainingPipeline:
+class DataValidationPipeline:
     def __init__(self):
         pass
 
