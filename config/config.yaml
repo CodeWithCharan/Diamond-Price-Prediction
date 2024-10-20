@@ -14,3 +14,9 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/diamonds.csv
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  X_train_transformed_path: artifacts\data_transformation\X_train_transformed.csv
+  y_train_path: artifacts\data_transformation\y_train.csv
+  model_name: model.joblib

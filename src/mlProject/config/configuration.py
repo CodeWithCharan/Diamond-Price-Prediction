@@ -1,6 +1,7 @@
 from mlProject.constants import *
 from mlProject.utils.common import read_yaml, create_directories
-from mlProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig, DataTransformationConfig)
+from mlProject.entity.config_entity import (DataIngestionConfig, DataValidationConfig,
+                                            DataTransformationConfig, ModelTrainerConfig)
 
 class ConfigurationManager:
     # pull yaml file paths from constants
@@ -69,3 +70,20 @@ class ConfigurationManager:
         )
         
         return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.RandomForestRegressor
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+            root_dir = config.root_dir,
+            X_train_transformed_path = config.X_train_transformed_path,
+            y_train_path = config.y_train_path,
+            model_name = config.model_name,
+            n_estimators = params.n_estimators,
+            random_state = params.random_state
+        )
+
+        return model_trainer_config

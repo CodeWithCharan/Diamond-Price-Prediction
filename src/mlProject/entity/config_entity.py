@@ -23,3 +23,13 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     target_column: str
+
+# Model Trainer
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    X_train_transformed_path: Path
+    y_train_path: Path
+    model_name: str
+    n_estimators: int
+    random_state: int
