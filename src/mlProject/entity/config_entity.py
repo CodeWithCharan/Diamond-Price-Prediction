@@ -33,3 +33,15 @@ class ModelTrainerConfig:
     model_name: str
     n_estimators: int
     random_state: int
+
+# Model Evaluation
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    X_test_transformed_path: Path
+    y_test_path: Path
+    model_path: Path
+    metric_file: str
+    target_column: str
+    all_params: dict
+    mlflow_uri: str

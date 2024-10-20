@@ -28,3 +28,36 @@ This project aims to build a machine learning model to predict diamond prices ba
 
 8. **Update** `main.py`
    - **Purpose:** Acts as the entry point for executing the entire pipeline. It triggers each stage sequentially, enabling the end-to-end execution of the project.
+
+## MLFlow
+
+[Documentation](https://mlflow.org/docs/latest/index.html)
+
+### CMD
+```bash
+mlflow ui
+```
+
+## DagsHub
+
+[Documentation](https://dagshub.com/)
+
+### Tracking URI:
+
+- MLFLOW_TRACKING_URI = https://dagshub.com/CodeWithCharan/Diamond-Price-Prediction.mlflow
+
+- MLFLOW_TRACKING_USERNAME = CodeWithCharan
+
+- MLFLOW_TRACKING_PASSWORD = YourAccessToken
+
+### Run this to export as env variables:
+
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/CodeWithCharan/Diamond-Price-Prediction.mlflow
+```
+```bash
+export MLFLOW_TRACKING_USERNAME=CodeWithCharan
+``` 
+```bash
+export MLFLOW_TRACKING_PASSWORD=YourAccessToken
+```
