@@ -29,10 +29,10 @@ class DataTransformation:
         df = self.remove_outliers()
 
         # inputs (x)
-        X = df.drop(columns=['price'])
+        X = df.drop([self.config.target_column], axis=1)
 
         # output (y)
-        y = df['price']
+        y = df[[self.config.target_column]]
 
         return X, y
     
