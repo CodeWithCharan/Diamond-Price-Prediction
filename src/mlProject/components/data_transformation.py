@@ -31,8 +31,8 @@ class DataTransformation:
         # inputs (x)
         X = df.drop([self.config.target_column], axis=1)
 
-        # output (y)
-        y = df[[self.config.target_column]]
+        # output (y), squeezing it to ensure 1D Series
+        y = df[self.config.target_column].squeeze()
 
         return X, y
     
