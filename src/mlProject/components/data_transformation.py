@@ -1,4 +1,5 @@
 import os
+import joblib
 from mlProject import logger
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -96,6 +97,10 @@ class DataTransformation:
 
         X_test_transformed.to_csv(os.path.join(self.config.root_dir, "X_test_transformed.csv"), index=False)
         y_test.to_csv(os.path.join(self.config.root_dir, "y_test.csv"), index=False)
+
+        # Save the fitted scaler and encoder for future use (e.g., during prediction)
+        joblib.dump(std_scaler, os.path.join(self.config.root_dir, 'scaler.pkl'))
+        joblib.dump(ordinal_encoder, os.path.join(self.config.root_dir, 'encoder.pkl'))
 
         logger.info(f"X train transformed size: {X_train_transformed.shape}, y train size:{y_train.shape}")
         logger.info(f"X test transformed size: {X_test_transformed.shape}, y test size: {y_test.shape}")
