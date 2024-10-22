@@ -39,7 +39,11 @@ https://github.com/user-attachments/assets/fe2e389d-1b8b-4d41-8874-243039567831
 
 ## DAGsHub Model Registry
 
-[Documentation](https://dagshub.com/)
+[DAGsHub Documentation](https://dagshub.com/)
+
+- **MLFlow Experiment Tracking:** https://dagshub.com/CodeWithCharan/Diamond-Price-Prediction.mlflow
+
+- **Model Versioning:** https://dagshub.com/CodeWithCharan/Diamond-Price-Prediction.mlflow/#/models
 
 ### MLFlow Tracking URI:
 
