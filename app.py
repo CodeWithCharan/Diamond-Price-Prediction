@@ -63,6 +63,7 @@ def index():
 
 
 if __name__ == "__main__":
-    # run the app
+    # run the app locally
     # app.run(host="0.0.0.0", port=8080, debug=True)
+    # run the app in cloud
     app.run(host="0.0.0.0", port=8080)
